@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(24, 122, 235);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(39, 38, 38);
+}
+
+/*  */
+.first,
+.second,
+.third,
+.fourth {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 30px;
+}
+
+
+.first {
+    background-color: rgb(238, 29, 78);
+    animation: loading 1s 0.6s infinite forwards linear;
+    left: 30px;
+}
+
+.second {
+    background-color: rgb(24, 85, 228);
+    left: 55px;
+    animation: loading 1s 0.4s infinite linear forwards;
+
+}
+
+.third {
+    left: 80px;
+    background-color: black;
+    animation: loading 1s 0.2s infinite forwards linear;
+}
+
+.fourth {
+    animation: loading 1s infinite linear forwards;
+    left: 105px;
+    background-color: rgb(8, 214, 90);
+}
+
+@keyframes loading {
+
+    0%,
+    20% {
+        bottom: 30px;
+    }
+
+    40%,
+    60% {
+        bottom: 45px;
+        background-color: rgb(218, 217, 217);
+    }
+
+    80%,
+    100% {
+        bottom: 30px;
+        background-color: black;
+    }
+}
+
+/*  */
+
+/* header style */
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 17px;
+    border-bottom: 1px solid rgb(160, 158, 158);
+}
+
+/* mode */
+.mode {
+    position: absolute;
+    right: 20px;
+}
+
+@media(max-width:991px) {
+    .mode {
+        right: 0;
+        top: 44px;
+    }
+}
+
+.mode>span {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+.mode div {
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    width: 45px;
+    height: 24px;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.mode div span {
+    transition: 0.3s;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(23, 98, 238);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* mode */
+header .image {
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+header .image img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+header h2 {
+    color: white;
+}
+
+
+@media(max-width:770px) {
+    header {
+        width: 90%;
+    }
+
+    header .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 48%;
+    }
+
+    header .image img {
+        width: 130%;
+        border-radius: 50px;
+    }
+
+    header div h2 {
+        font-size: 17px;
+        width: 110px;
+    }
+
+    header div:nth-child(2) p {
+        font-size: 14px;
+    }
+
+    header div:nth-child(1) {
+        margin-right: 10px;
+    }
+
+}
+
+header div:nth-child(2) p {
+    color: rgb(170, 168, 168);
+    margin-top: 8px;
+}
+
+section {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px auto 30px;
+    background-color: rgb(20, 19, 19);
+    color: white;
+    /* box-shadow: 0 0 10px rgb(94, 93, 93); */
+    border-radius: 8px;
+}
+
+@media (max-width:991px) {
+    section {
+        display: block;
+        padding-bottom: 60px;
+    }
+
+    section div.about {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    section div.skills_details {
+        width: 96%;
+        margin: auto;
+    }
+}
+
+section .about {
+    width: 50%;
+
+}
+
+section .about h2 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+}
+
+section .about p {
+    color: rgb(129, 128, 128);
+    line-height: 1.5;
+}
+
+section .skills_details {
+    width: 48%;
+}
+
+section .skills_details h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+section .skills_details .details {
+    margin-bottom: 20px;
+}
+
+
+section .skills_details .details span {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(94, 91, 91);
+}
+
+section .skills_details .links {
+    margin-bottom: 20px;
+
+}
+
+section .skills_details .links a {
+    display: block;
+}
+
+section .skills_details .links a:nth-child(1) {
+    margin-bottom: 8px;
+}
+
+section .skills_details .skills {
+    margin-bottom: 20px;
+
+}
+
+section .skills_details .skills ul li {
+    margin-bottom: 10px;
+}
+
+section .skills_details .skills ul li div {
+    width: 100%;
+    height: 3px;
+    margin-top: 4px;
+    position: relative;
+    background-color: rgb(212, 212, 212);
+}
+
+section .skills_details .skills ul li div:after {
+    position: absolute;
+    content: '';
+    background-color: rgb(33, 130, 241);
+    height: 100%;
+}
+
+@keyframes animate_after1 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes animate_after2 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes animate_after3 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes animate_after4 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes animate_after5 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes animate_after6 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes animate_after7 {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+section .skills_details .skills ul li:nth-child(1) div:after {
+    width: 0%;
+    animation: animate_after1 1.2s 2s 1 forwards linear;
+}
+
+section .skills_details .skills ul li:nth-child(2) div:after {
+    width: 0%;
+    animation: animate_after2 1.2s 2s 1 forwards linear;
+
+}
+
+section .skills_details .skills ul li:nth-child(3) div:after {
+    animation: animate_after3 1.2s 2s 1 forwards linear;
+    width: 0%;
+}
+
+section .skills_details .skills ul li:nth-child(4) div:after {
+    animation: animate_after4 1.2s 2s 1 forwards linear;
+    width: 0%;
+}
+
+section .skills_details .skills ul li:nth-child(5) div:after {
+    animation: animate_after5 1.2s 2s 1 forwards linear;
+    width: 0%;
+}
+
+section .skills_details .skills ul li:nth-child(6) div:after {
+    animation: animate_after6 1.2s 2s 1 forwards linear;
+    width: 0%;
+}
+
+section .skills_details .skills ul li:nth-child(7) div:after {
+    animation: animate_after7 1.2s 2s 1 forwards linear;
+    width: 0%;
+}
+
+section .skills_details .skills ul li:nth-child(8) div:after {
+    animation: animate_after5 1.2s 2s 1 forwards linear;
+    width: 0%;
+}
+
+/* menu side   */
+
+.fa-ellipsis-v {
+    position: absolute;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    top: 10px;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(68, 67, 67);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    transition: 0.3s;
+}
+
+.fa-ellipsis-v:hover {
+    background-color: #959595;
+}
+
+.side-menu {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+    width: 0;
+    background-color: rgb(75, 75, 75);
+    color: black;
+    transition: All 0.3s;
+    height: 0;
+    text-transform: capitalize;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.side-menu.show {
+    width: 240px;
+    height: 200px;
+}
+
+.side-menu h5 {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 7px;
+    color: rgb(128, 128, 128);
+}
+
+.side-menu ul {
+    padding: 5px;
+}
+
+.side-menu ul li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.side-menu ul li:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+.side-menu ul li a {
+    display: block;
+    padding: 8px 7px;
+    width: 100%;
+}
+
+.side-menu ul li:hover {
+    background-color: #9d9d9d;
+}
+
+
+/* 
+@keyframes animate_bars {
+    form {
+        transform: rotate(0);
+        color: gray;
+        opacity: 0.7;
+    }
+
+    to {
+        transform: rotate(180deg);
+        opacity: 1;
+        color: white;
+    }
+} */
+
+/* lang icons */
+.lang-icons {
+    margin-top: 20px;
+}
+
+.lang-icons img {
+    width: 60px;
+    padding: 3px;
+    background-color: #eee;
+    height: 60px;
+    border-radius: 8px;
+}
+
+
+section.animate {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 200%; */
+    background-color: rgba(0, 0, 0, 0.753);
+    opacity: 0;
+    visibility: hidden;
+    animation: secAnimate 1.5s 0.1s 1 forwards linear;
+}
+
+section.animate div {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+@keyframes secAnimate {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: 0.3s;
+    position: relative;
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    margin: 14px;
+}
+
+@media(max-width:991px) {
+
+    .one,
+    .two,
+    .three,
+    .four,
+    .five,
+    .six {
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+    }
+
+    section.animate div {
+        width: 100%;
+    }
+}
+
+.one:hover,
+.three:hover,
+.two:hover,
+.four:hover,
+.five:hover,
+.six:hover {
+    transform: scale(1.04);
+}
+
+.one {
+    background-color: rgb(13, 210, 224);
+    animation: one 1s 1 forwards linear;
+}
+
+.two {
+    background-color: rgb(199, 19, 223);
+    animation: two 1s 0.4s 1 forwards linear;
+}
+
+.three {
+    background-color: rgb(243, 144, 14);
+    animation: three 1s 0.6s 1 forwards linear;
+}
+
+.four {
+    background-color: rgb(14, 140, 243);
+    animation: four 1s 0.8s 1 forwards linear;
+}
+
+.five {
+    background-color: rgb(14, 140, 243);
+    animation: four 1s 1s 1 forwards linear;
+}
+
+.six {
+    background-color: rgb(14, 140, 243);
+    animation: one 1s 1.2s 1 forwards linear;
+}
+
+@keyframes one {
+    from {
+        top: 250px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes two {
+    from {
+        top: 250px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes three {
+    from {
+        top: 250px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes four {
+    from {
+        top: 250px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+
+.close {
+    position: absolute;
+    right: 45px;
+    top: 45px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(56, 55, 55);
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover {
+    background-color: rgb(110, 109, 109);
+}
